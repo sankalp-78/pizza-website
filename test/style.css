@@ -1,0 +1,324 @@
+/* Basic styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Margin and padding for consistency */
+section {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+/* Navbar */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header nav .logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-container {
+    background-image: url('images/hero-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+#about .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-img {
+    width: 45%;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    margin-top: 10px;
+}
+
+/* Menu Section (Carousel) */
+.menu-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.menu-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.menu-card {
+    width: 250px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 10px;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.menu-card h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.menu-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.menu-card.active {
+    transform: scale(1.1);
+}
+
+/* Carousel Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-nav:hover {
+    opacity: 1;
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+/* Other Sections (Offers, Testimonials, Reservations) */
+.offer-container, .testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.offer-card, .testimonial-box, .reservation-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.testimonial-box .customer-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.star-rating .fa {
+    color: #FFD700;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+}
+
+/* Centering the reservation form */
+.reservation-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reservation-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form input,
+.reservation-form button {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="time"] {
+    padding-left: 10px;
+}
+
+.reservation-form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Add this to your existing CSS for the navigation arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-nav:hover {
+    opacity: 1;
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+
+.reservation-form button:hover {
+    background-color: #444;
+}
+
+#reservation {
+    text-align: center; /* Aligns text and block elements to the center */
+    margin: 0 auto; /* Ensures that the section is centered horizontally */
+}
+
+.reservation-form {
+    display: inline-block; /* Makes the form block behave like an inline element for centering */
+    text-align: left; /* Ensures the form elements are left-aligned inside the block */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Optional: Gives the form a white background */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial-container, .offer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-box, .offer-card, .reservation-form {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .menu-card {
+        width: 80%;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text,
+    .about-img {
+        width: 100%;
+    }
+}
